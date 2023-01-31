@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/libs/reset.css">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="form__container">
+            <form class = "form" novalidate>
+                <div class="input__field--wrapper">
+                    <label for = "name" class = "input__field--description">
+                        Name:
+                    </label>
+                    <div class="input__field--input">
+                        <input type = "text" id = "name" name = "name" placeholder="Enter name:" class="input__field--input-input jq-name">
+                        <p><span class="form__description emsg1 form__description--hidden">The name must have at least 2 characters and can only contain letters. Max 50 characters.</span></p>
+                    </div>
+                        
+                </div>
+                
+                <div class="input__field--wrapper">
+                    <label for = "email" class = "input__field--description">
+                        Email:
+                    </label>
+                    <div class="input__field--input">
+                        <input type = "email" id = "email" name = "email" placeholder="Enter email:" class = "input__field--input-input jq-email">
+                        <p><span class="form__description emsg2 form__description--hidden">The email must be in a valid format (e.g. example@example.com)</span></p>
+                    </div>
+                </div>
+                
+                <div class="input__field--wrapper">
+                    <label for = "password" class = "input__field--description">
+                        Password:
+                    </label>
+                    <div class="input__field--input">
+                        <input type = "password" id = "password" name = "password" placeholder="Enter password:" class = "input__field--input-input jq-password">
+                        <p><span class="form__description emsg3 form__description--hidden">The password must be at least 8 characters long and must contain at least 1 number and 1 special character (!, @, #, $, %, ^, &, *</span></p>
+                    </div>  
+                </div>
+                
+                <div class = "form__button--container">
+                    <button class = "form__button jq-submit">Submit</button>
+                    <p><span class="form__description successMsg form__description--hidden">Thank you! Your weekly subscription for $9.99 is accepted!</span></p>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <script src="/scripts.js"></script>
+</body>
+</html>
