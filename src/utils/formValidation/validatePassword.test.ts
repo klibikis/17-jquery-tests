@@ -1,9 +1,36 @@
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
 import validatePassword from './validatePassword';
 
-describe('sum', () => {
-  it('should return true for correct name', () => {
-    const name = validatePassword("asff$$52637@");
+describe('empty', () => {
+  it('should return false for empty password', () => {
+    const password = validatePassword("   ");
 
-    expect(name).toEqual(true);
+    expect(password).toEqual(false);
+  });
+});
+
+describe('password with 1 number and 1 special character', () => {
+  it('should return true for password with 1 number and 1 special character', () => {
+    const password = validatePassword("asff$$52637@");
+
+    expect(password).toEqual(true);
+  });
+});
+
+describe('password with 1 number and 1 special character too short', () => {
+  it('should return false for too short password', () => {
+    const password = validatePassword("a52637@");
+
+    expect(password).toEqual(false);
+  });
+});
+
+describe('right length password without number', () => {
+  it('should return false for right length password with number but not special character', () => {
+    const password = validatePassword("a526374444");
+
+    expect(password).toEqual(false);
   });
 });

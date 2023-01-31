@@ -2,10 +2,14 @@ import validateName from "./utils/formValidation/validateName"
 import validateEmail from "./utils/formValidation/validateEmail"
 import validatePassword from "./utils/formValidation/validatePassword"
 
+const { JSDOM } = require( "jsdom" );
+const { window } = new JSDOM( "" );
+const $ = require( "jquery" )( window );
+
 
 $(document).ready(() => {
     
-    $('form').submit((e) => {
+    $('form').submit((e:any) => {
         e.preventDefault()
         let name = $('input[name = name]').val()
         let email = $('input[name = email]').val()
