@@ -1,6 +1,6 @@
-const { JSDOM } = require( "jsdom" );
-const { window } = new JSDOM( "" );
-const $ = require( "jquery" )( window );
+// const { JSDOM } = require( "jsdom" );
+// const { window } = new JSDOM( "" );
+// const $ = require( "jquery" )( window );
 const regexEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
 const validateEmail = (email: string) => {

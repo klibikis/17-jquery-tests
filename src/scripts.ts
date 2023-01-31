@@ -2,9 +2,9 @@ import validateName from "./utils/formValidation/validateName"
 import validateEmail from "./utils/formValidation/validateEmail"
 import validatePassword from "./utils/formValidation/validatePassword"
 
-const { JSDOM } = require( "jsdom" );
-const { window } = new JSDOM( "" );
-const $ = require( "jquery" )( window );
+// const { JSDOM } = require( "jsdom" );
+// const { window } = new JSDOM( "" );
+// const $ = require( "jquery" )( window );
 
 
 $(document).ready(() => {
